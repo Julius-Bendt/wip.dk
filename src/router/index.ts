@@ -7,17 +7,46 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      meta: {
+        title: "Home",
+      },
+    },
+    {
+      path: '/colors',
+      name: 'colors',
+      meta: {
+        title: "Color scheme",
+      },
+      component: () => import('../views/ColorSchemeView.vue')
+    },
+    {
+      path: '/tools',
+      name: 'tools',
+      meta: {
+        title: "Tools",
+      },
+      component: () => import('../views/ToolsView.vue')
+    },
+    {
+      path: '/crypto',
+      name: 'crypto',
+      meta: {
+        title: "Crypto",
+      },
+      component: () => import('../views/CryptoView.vue')
     }
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
   ]
 })
+
+const DEFAULT_TITLE = 'WIP';
+router.afterEach((to, from) => {
+  let title = DEFAULT_TITLE;
+
+  if (to.meta.title != undefined) {
+    title = "WIP | " + to.meta.title;
+  }
+  document.title = title;
+});
 
 export default router
