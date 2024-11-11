@@ -1,14 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wip</title>
+    <link rel="icon" type="image/png" href="/public/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="wip.dk" />
+    <link rel="manifest" href="/public/site.webmanifest" />
+    <title>Wip.dk</title>
     <script defer data-domain="wip.dk" src="https://wip.dk/js/script.js"></script>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <script>
+        window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            color: #00ff00;
+            font-family: monospace;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+                padding: 0.5rem;
+            }
+        }
+
+        .terminal {
+            background: #0a0a0a;
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 600px;
+            padding: 1.5rem;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .red {
+            background: #ff5f56;
+        }
+
+        .yellow {
+            background: #ffbd2e;
+        }
+
+        .green {
+            background: #27c93f;
+        }
+
+        .content {
+            line-height: 1.5;
+        }
+
+        .line {
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .prompt::before {
+            content: "$ ";
+            color: #00ff00;
+        }
+
+        .indent {
+            padding-left: 1rem;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+            display: inline-block;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .typing {
+            width: 21ch;
+            animation: typing 2s steps(21);
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+
+        .divider {
+            margin: 0.7rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="terminal">
+        <div class="window-controls">
+            <div class="control red"></div>
+            <div class="control yellow"></div>
+            <div class="control green"></div>
+        </div>
+        <div class="content">
+            <span class="typing line">Welcome to Wip.dk</span>
+            <span class="line">----------------</span>
+            <span class="line prompt">user: Julius H. Bendt</span>
+            <span class="line prompt">location: Aalborg, Denmark</span>
+            <span class="line divider"></span>
+            <span class="line prompt">cat about.txt</span>
+            <span class="line indent">Hi! I'm a passionate fullstack developer with 3 years of experience in building web
+                applications.</span>
+            <span class="line indent">I love creating clean, efficient solutions to complex problems.</span>
+            <span class="line divider"></span>
+            <span class="line indent">When I'm not coding, you can find me:</span>
+            <span class="line indent">- Tinkering with home automation, and Docker containers</span>
+            <span class="line indent">- Contributing to open source</span>
+            <span class="line indent">- Bouldering</span>
+            <span class="line divider"></span>
+            <span class="line prompt">cat skills.txt</span>
+            <span class="line indent">- JavaScript/TypeScript</span>
+            <span class="line indent">- Vue/Tailwind</span>
+            <span class="line indent">- Node.js/.NET/Laravel</span>
+            <span class="line indent">- Flutter</span>
+            <span class="line indent">- Terraform</span>
+            <span class="line indent">- Github Actions</span>
+            <span class="line divider"></span>
+            <span class="line prompt">cat contact.txt</span>
+            <span class="line indent">- github: <a href="https://github.com/Julius-Bendt" target="_blank" onclick="plausible('Clicked github');">github.com/Julius-Bendt</a></span>
+            <span class="line indent">- linkedin: <a href="https://www.linkedin.com/in/julius-bendt/" target="_blank" onclick="plausible('Clicked linkedin');">linkedin.com/in/julius-bendt</a></span>
+            <span class="line divider"></span>
+            <span class="line prompt">portfolio: <a href="https://jub.dk"target="_blank"  onclick="plausible('Clicked portfolio');">jub.dk</a><span class="blink">▊</span></span>
+        </div>
+    </div>
+</body>
+
 </html>
