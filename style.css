@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #00ff00;
+  font-family: monospace;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+}
+
+.terminal {
+  background: #0a0a0a;
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red {
+  background: #ff5f56;
+}
+
+.yellow {
+  background: #ffbd2e;
+}
+
+.green {
+  background: #27c93f;
+}
+
+.content {
+  line-height: 1.5;
+}
+
+/* New styles for consistent heading sizes */
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-family: monospace;
+}
+
+/* Make h2 look like the terminal prompt */
+h2.prompt::before {
+  content: "$ cat ";
+  color: #00ff00;
+}
+
+.line {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.prompt::before {
+  content: "$ ";
+  color: #00ff00;
+}
+
+.indent {
+  padding-left: 1rem;
+}
+
+.blink {
+  animation: blink 1s infinite;
+  display: inline-block;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.typing {
+  width: 21ch;
+  animation: typing 2s steps(21);
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.divider {
+  margin: 0.7rem 0;
+}

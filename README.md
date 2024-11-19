@@ -1,35 +1,38 @@
-# Weekend In Progress (WIP!) 🚀
+# WIP.dk 🚀
 
-The weekend is in progress, and you've stumbled upon WIP! In this repository, I share various weekend projects and essential tools that find a regular place in my workflow.
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwip.dk)](https://wip.dk)
+![Last Commit](https://img.shields.io/github/last-commit/Julius-Bendt/wip.dk)
 
-## Tools Currently Developed:
+A minimalist terminal-themed portfolio website showcasing my development experience and skills. Built with pure HTML and CSS, featuring a retro terminal aesthetic.
 
-- **Colors:** Explore the color scheme I use consistently across different projects.
-- **Tools:** Discover a curated list of tools that I always install when resetting my computer.
-- **Crypto:** Dive into a page designed for encrypting files using symmetric AES256, powered by modern browser APIs.
+## 🎯 Features
 
-Explore the world of WIP! and discover handy projects and tools for your coding adventures. Happy coding! 🛠️
+- Terminal-inspired interface
+- Responsive design
+- SEO optimized
 
-## Project Setup
+## 🛠️ Tech Stack
 
-```sh
-npm install
-```
+- HTML5
+- CSS3 (Animations & Flexbox)
+- Vanilla JavaScript
 
-### Compile and Hot-Reload for Development
+## 🔍 SEO Implementation
 
-```sh
-npm run dev
-```
+This project serves as a practical implementation of SEO best practices, including:
 
-### Type-Check, Compile and Minify for Production
+- Semantic HTML structure
+- Meta tags optimization
+- Schema.org markup
+- Open Graph protocols
+- Robots.txt configuration
 
-```sh
-npm run build
-```
+## 📝 License
 
-### Lint with [ESLint](https://eslint.org/)
+[MIT](LICENSE)
 
-```sh
-npm run lint
-```
+## 🔗 Links
+
+- Live Site: [wip.dk](https://wip.dk)
+- Portfolio: [jub.dk](https://jub.dk)
+- Author: [Julius Bendt](https://github.com/Julius-Bendt)

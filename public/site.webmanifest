@@ -1,21 +1,42 @@
 {
-  "name": "wip.dk",
-  "short_name": "wip.dk",
+  "name": "Julius Bendt | Developer Portfolio",
+  "short_name": "J.Bendt",
+  "description": "Julius Bendt's developer portfolio - Fullstack developer from Aalborg, Denmark",
   "icons": [
     {
       "src": "/public/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "maskable any"
     },
     {
       "src": "/public/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/public/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
-  "theme_color": "#000",
-  "background_color": "#000",
-  "display": "standalone"
+  "start_url": "/",
+  "scope": "/",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["development", "portfolio", "technology"],
+  "lang": "en",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Portfolio",
+      "url": "https://jub.dk",
+      "description": "View my detailed portfolio"
+    }
+  ]
 }

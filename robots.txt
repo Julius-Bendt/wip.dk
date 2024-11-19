@@ -1,0 +1,13 @@
+# robots.txt for wip.dk
+User-agent: *
+Allow: /
+
+# Allow all search engines to access JavaScript and CSS
+Allow: /*.js$
+Allow: /*.css$
+
+# Prevent crawling of analytics scripts
+Disallow: /js/script.js
+
+# Host
+Host: https://wip.dk
